@@ -6,40 +6,17 @@
   "extends": [
     "config:recommended"
   ],
-  "baseBranches": [
-    "main",
-    "release"
-  ],
-  "vulnerabilityAlerts": {
-    "enabled": true,
-    "addLabels": [
-      "security"
-    ],
-    "automerge": true
-  },
+  "baseBranches": ["main", "release"],
   "packageRules": [
     {
-      "description": "Disable regular updates on release by default",
-      "matchBaseBranches": [
-        "release"
-      ],
-      "matchUpdateTypes": [
-        "major",
-        "minor"
-      ],
+      "matchBaseBranches": ["release"],
+      "matchUpdateTypes": ["major", "minor"],
       "enabled": false
     },
     {
-      "description": "Re-enable patch updates on release",
-      "separateMinorPatch": true,
-      "matchBaseBranches": [
-        "release"
-      ],
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "enabled": true,
-      "automerge": true
+      "matchBaseBranches": ["release"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": true
     }
   ]
 }
