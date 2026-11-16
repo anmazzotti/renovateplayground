@@ -23,15 +23,11 @@
       "matchBaseBranches": [
         "release"
       ],
-      "matchUpdateTypes": [
-        "major",
-        "minor"
-      ],
+      "separateMinorPatch": true,
       "enabled": false
     },
     {
       "description": "Re-enable patch updates on release",
-      "separateMinorPatch": true,
       "matchBaseBranches": [
         "release"
       ],
