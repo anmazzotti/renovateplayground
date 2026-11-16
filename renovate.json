@@ -12,6 +12,11 @@
       "matchBaseBranches": ["release"],
       "matchUpdateTypes": ["major", "minor"],
       "enabled": false
+    },
+    {
+      "matchBaseBranches": ["release"],
+      "matchUpdateTypes": ["patch"],
+      "enabled": true
     }
   ]
 }
