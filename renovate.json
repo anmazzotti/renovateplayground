@@ -1,0 +1,38 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "baseBranches": [
+    "main",
+    "release"
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": [
+      "security"
+    ],
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "description": "Disable regular updates on release by default and split minor/patch versions",
+      "matchBaseBranches": [
+        "release"
+      ],
+      "separateMinorPatch": true,
+      "enabled": false
+    },
+    {
+      "description": "Re-enable patch updates on release",
+      "matchBaseBranches": [
+        "release"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "enabled": true,
+      "automerge": true
+    }
+  ]
+}
