@@ -17,10 +17,9 @@
     ],
     "automerge": true
   },
-  "separateMinorPatch": true,
   "packageRules": [
     {
-      "description": "Disable regular updates on release by default and split minor/patch versions",
+      "description": "Disable regular updates on release by default",
       "matchBaseBranches": [
         "release"
       ],
@@ -32,6 +31,7 @@
     },
     {
       "description": "Re-enable patch updates on release",
+      "separateMinorPatch": true,
       "matchBaseBranches": [
         "release"
       ],
