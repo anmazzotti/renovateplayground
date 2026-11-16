@@ -17,13 +17,17 @@
     ],
     "automerge": true
   },
+  "separateMinorPatch": true,
   "packageRules": [
     {
       "description": "Disable regular updates on release by default and split minor/patch versions",
       "matchBaseBranches": [
         "release"
       ],
-      "separateMinorPatch": true,
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
       "enabled": false
     },
     {
